@@ -146,13 +146,13 @@ input, select, textarea {
 		font-size: 1rem;
 		line-height: 1.65;
 	}
-
+	
 	a {
 		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+		/* border-bottom: dotted 1px rgba(255, 255, 255, 0.5); */
 		text-decoration: none;
 		color: inherit;
 	}
@@ -225,7 +225,142 @@ input, select, textarea {
 	h6 {
 		font-size: 0.6rem;
 	}
+	.resume-main{
+		font-size: 1.15rem;
+		letter-spacing: 0.2rem;
+		text-align: center;
+	}
+	.resume-submain{
+		border-bottom: solid 1px #ffffff;
+			width: -moz-max-content;
+			width: -webkit-max-content;
+			width: -ms-max-content;
+			width: max-content;
+			padding-bottom: 0rem;
+			margin: 0 0 2rem 0;
+	}
+	.resume-sub-submain{
+		font-size: 0.95rem;
+		letter-spacing: 0.1rem;
+		margin: 0 0 0rem 0;
+	}
+	.resume-ts{
+		font-weight: bold;
+	}
+	.resume-dow{
+		font-size: 0.9rem;
+		font-style: italic;
+	}
+	.resume-row{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+	}
+	.resume-center-row{
+		position: absolute;
+  		left: 50%;
+  		transform: translateX(-50%);
+	}
+	.resume-poe{
+		text-align: center;
+	}
+	.resume-dwnLoad-svg {
+		display: flex;
+		justify-content: flex-end; /* 🔁 вирівнює все вправо */
+		align-items: center; /* (необов’язково) центрує по вертикалі */
+		margin: 0.5rem 0 2rem 0;
+	  }
+	.li-sk{
+		font-size: 1.2rem;
+		margin: 0.8rem 0 0.5rem 0;
+		font-weight: 500;
+	}
+	.aTagNL{
+		border-bottom: none;
+	}
 
+	.toggle-container {
+		width: 300px;
+		margin: 20px ;
+		font-family: "Source Sans Pro", sans-serif;
+		font-weight: 600;
+	  }
+  
+	  .toggle-button {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		user-select: none;
+		font-size: 16px;
+	  }
+  
+	  .arrow {
+		transition: transform 0.3s ease;
+		margin-right: 10px;
+	  }
+	  /* .arrow-content{
+		border-bottom: solid 1px #ffffff;
+			width: -moz-max-content;
+			width: -webkit-max-content;
+			width: -ms-max-content;
+			width: max-content;
+			padding-bottom: 0rem;
+	  } */
+	  .arrow-content {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+		font-size:1.2rem;
+	  }
+	  
+	  .arrow-content::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 1px; /* товщина підкреслення */
+		width: 0;
+		background-color: #ffffff; /* колір підкреслення */
+		transition: width 0.3s ease;
+	  }
+	  
+	  .arrow-content:hover::after {
+		width: 100%;
+	  }
+  
+	  .arrow.rotate {
+		transform: rotate(90deg);
+	  }
+  
+	  .content {
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height 0.5s ease;
+		font-weight: 400;
+	  }
+	  .content-text{
+		margin: 1rem 0rem 0rem 0rem;
+	  }
+  
+	  .content.show {
+		max-height: 600px; 
+	  }
+	  .backGr-span{
+		background-color: #454545;
+  		padding: 4px;
+  		border-radius: 4px;
+	  }
+	  .backGr-sp{
+		background-color: #686868;
+  		padding: 4px;
+  		border-radius: 4px 4px 4px 4px;
+		transition: background-color 0.3s ease;
+	  }
+	  .backGr-sp:hover {
+		background-color: #4a4a4a; /* новий колір при наведенні */
+	}
 	@media screen and (max-width: 736px) {
 
 		h1 {
@@ -854,14 +989,14 @@ input, select, textarea {
 			}
 
 				ul.actions:not(.fixed) li {
-					-moz-flex-grow: 1;
-					-webkit-flex-grow: 1;
-					-ms-flex-grow: 1;
-					flex-grow: 1;
-					-moz-flex-shrink: 1;
-					-webkit-flex-shrink: 1;
-					-ms-flex-shrink: 1;
-					flex-shrink: 1;
+					-moz-flex-grow: 2;
+					-webkit-flex-grow: 2;
+					-ms-flex-grow: 2;
+					flex-grow: 2;
+					-moz-flex-shrink: 2;
+					-webkit-flex-shrink: 2;
+					-ms-flex-shrink: 2;
+					flex-shrink: 2;
 					padding: 1rem 0 0 0;
 					text-align: center;
 					width: 100%;
@@ -1140,9 +1275,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1640,7 +1778,6 @@ input, select, textarea {
 			margin-bottom: 0;
 			text-transform: uppercase;
 		}
-
 		body.is-article-visible #footer {
 			-moz-transform: scale(0.95);
 			-webkit-transform: scale(0.95);
@@ -1656,3 +1793,6 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+		
+		
