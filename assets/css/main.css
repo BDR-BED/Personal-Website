@@ -345,7 +345,7 @@ input, select, textarea {
 	  }
   
 	  .content.show {
-		max-height: 600px; 
+		max-height: 1000px; 
 	  }
 	  .backGr-span{
 		background-color: #454545;
